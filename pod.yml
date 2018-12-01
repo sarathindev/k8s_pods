@@ -1,0 +1,9 @@
+---
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: sandeep
+spec:
+  containers:
+  - name: sandeepnginxkubeviapodyml
+    image: sarathindev/sandeepnginx:1.0

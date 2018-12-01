@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-replicaset
+  labels:
+    app: myapprs
+    type: front-end
+spec:
+  template:
+
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myappcont
+        type: front-end
+    spec:
+      containers:
+        - name: containerunderdeploy
+          image: thechetantalwar/customnginx
+  replicas: 3
+  selector:
+    matchLabels:
+      type: front-end
+
+    
+      
